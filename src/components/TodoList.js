@@ -6,7 +6,8 @@ export default function TodoList({
     deleteTodo, 
     toggleTodo,
     toggleTodoEdit,
-    editTodo}) {
+    editTodo,
+    selectTodo}) {
   return todoList.length ? (
     <ul>
       {todoList.map((todo) => todo.edit ? (
@@ -23,6 +24,7 @@ export default function TodoList({
           deleteTodo = {() => deleteTodo(todo.id)}
           toggleTodo = {() => toggleTodo(todo.id)}
           editTodo = {() => toggleTodoEdit(todo.id)}
+          selectTodo = {()=> selectTodo(todo.id)}
         />
       ))}
     </ul> //S'il y a au moins une tâche dans le tableau todoList nous parcourons le tableau et créons un composant TodoItem pour chaque tâche.
