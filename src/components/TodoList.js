@@ -1,11 +1,21 @@
 import TodoItem from './TodoItem';
 import EditTodo from "./EditTodo";
 
-export default function TodoList({ todoList, deleteTodo, toggleTodo, toggleTodoEdit }) {
+export default function TodoList({ 
+    todoList, 
+    deleteTodo, 
+    toggleTodo,
+    toggleTodoEdit,
+    editTodo}) {
   return todoList.length ? (
     <ul>
       {todoList.map((todo) => todo.edit ? (
-        <EditTodo key = {todo.id} todo={todo}/>
+        <EditTodo 
+        key = {todo.id} 
+        todo={todo}
+        cancelEditTodo={() => toggleTodoEdit(todo.id)}  
+        editTodo={(content) => editTodo(todo.id, content)}
+        />
       ) : (
         <TodoItem
           key={todo.id}
