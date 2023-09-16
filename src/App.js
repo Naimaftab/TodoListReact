@@ -6,7 +6,7 @@ function App() {
   const [todoList, setTodoList] = useState([]);
 
   function addTodo(content) {
-    const todo = { 
+    const todo = { //on précise tout ce qui est dans la todo
       id: crypto.randomUUID(), 
       done: false, 
       edit: false, 

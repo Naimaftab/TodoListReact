@@ -4,12 +4,12 @@ function AddTodo({ addTodo }){
     const [value, setValue] = useState("");
 
     function handleChange(e){
-        const inputValue = e.target.value;
+        const inputValue = e.target.value; //target represente la value 
         setValue(inputValue);
     }
 
     function handleKeyDown(e){
-        if (e.code === 'Enter' && value.length){
+        if (e.code === 'Enter' && value.length){ //voir dans la console log quel touche est focus "code"
             addTodo(value);
             setValue("");
         }
