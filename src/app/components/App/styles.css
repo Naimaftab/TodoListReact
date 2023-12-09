@@ -1,0 +1,23 @@
+
+.div-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 35px;
+
+}
+
+.btn-main{
+    width: 268px;
+    background-color: #ffbb00; 
+    color: #fff; 
+    border-radius: 5px; 
+    padding: 10px;
+    font-size: 18px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
